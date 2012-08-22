@@ -48,7 +48,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       if @note.save
         format.html { 
-          redirect_to course_note_path(@course, @note), 
+          redirect_to edit_course_note_path(@course, @note), 
                       notice: 'Note was successfully created.' 
         }
         format.json { render json: @note, status: :created, location: @note }
@@ -82,7 +82,7 @@ class NotesController < ApplicationController
     @note.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_notes_path(@course) }
+      format.html { redirect_to course_path(@course) }
       format.json { head :no_content }
     end
   end

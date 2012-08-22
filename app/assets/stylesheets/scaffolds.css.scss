@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #333333;
+  color: #DDDDDD;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -19,13 +19,16 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #61CE3C;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
   &:visited {
-    color: #666;
+    color: #61CE3C;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #333333;
+    background-color: #61CE3C;
   }
 }
 
@@ -33,10 +36,6 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
-}
-
-#notice {
-  color: green;
 }
 
 .field_with_errors {
@@ -69,12 +68,35 @@ div {
 }
 
 #notice {
+  background: none repeat scroll 0 0 #8DA6CE;
+  border-radius: 10px 10px 10px 10px;
+  color: black;
   float: right;
-  background: lightBlue;
-  min-width: 150px;
-  text-align: center;
   margin-right: 25px;
+  min-width: 150px;
   padding: 10px;
-  border-radius: 10px;
-  display: none;
+  text-align: center;
+}
+
+input {
+  background: none repeat scroll 0 0 #000000;
+  border: medium solid #EEEEEE;
+  border-radius: 5px 5px 5px 5px;
+  color: #FF7F00;
+  padding: 5px;
+}
+
+button {
+  background: none repeat scroll 0 0 #000000;
+  border: thin solid cyan;
+  border-radius: 5px 5px 5px 5px;
+  color: #8DA6CE;
+  font-size: 1.1em;
+  padding: 3px;
+}
+
+input[type="submit"] {
+  color: #D7FF3C;
+  font-size: 1.5em;
+  padding: 10px;
 }

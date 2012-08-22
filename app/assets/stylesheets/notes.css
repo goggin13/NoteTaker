@@ -2,10 +2,15 @@
 
 #note_body,
 #course_description {
-  width: 850px;
-  height: 500px;
-  font-size: 1.5em;
+  background: none repeat scroll 0 0 #0C1021;
+  border: thick solid black;
+  border-radius: 15px 15px 15px 15px;
+  color: #F8F8F8;
+  font-size: 1.25em;
+  height: 400px;
   padding: 5px;
+  width: 950px;
+  font-family: Verdana;
 }
 
 .note_body {
@@ -17,4 +22,14 @@
 .note_body h1 {
   font-size: 1.5em;
   line-height: 1.5em;
+}
+
+.preview {
+  width: 950px;
+  height: 200px;
+  border: thick solid black;
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: scroll;
+  margin: 15px 0px;
 }

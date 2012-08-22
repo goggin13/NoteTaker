@@ -11,11 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :course_id %>
-    <%= @course.name %>
-    <%= f.hidden_field :course_id, :value => @course.id %>
-  </div>
+  <%= f.hidden_field :course_id, :value => @course.id %>
 
   <div class="field">
     <%= f.label :title %>
@@ -31,8 +27,14 @@
     <button id='reset_note_body'>
       Reset Note
     </button>
-    <div class="field">
+    <button id='save_now'>
+      Save Note
+    </button>
+    <div class="field left">
       <%= f.text_area :body %>
+    </div>
+    <div class="showdown preview right">
+      <%= @note.body %>
     </div>
   <% end %>
   

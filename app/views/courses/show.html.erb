@@ -1,10 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<h1>
   <%= @course.name %>
-</p>
+</h1>
 
+<p class='showdown course_description'>
+  <%= @course.description %>
+</p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+
+<h3>Notes</h3>
+<hr/>
+
+<ul>
+  <% @course.notes.each do |note| %>
+    <li>
+      <%= link_to note.formatted_day, course_note_path(@course, note) %> -
+      <%= note.title %>
+    </li>
+  <% end %>
+</ul>
+  
+

@@ -1,20 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <b>Title:</b>
-  <%= @note.title %>
+  <%= @note.course.name %> : <b><%= @note.formatted_day %></b>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b><%= @note.title %></b>
+</p>
+
+<div class='showdown note_body'>
   <%= @note.body %>
-</p>
-
-<p>
-  <b>Course:</b>
-  <%= @note.course_id %>
-</p>
+</div>
 
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_course_note_path(@course, @note) %> |
+<%= link_to 'Back', course_notes_path(@course) %>

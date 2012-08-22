@@ -6,4 +6,9 @@ class Note < ActiveRecord::Base
   validates_presence_of :day
   
   belongs_to :course
+  
+  def formatted_day
+    day.strftime('%m/%d/%Y')
+  end
+  
 end

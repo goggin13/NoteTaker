@@ -67,3 +67,14 @@ div {
     list-style: square;
   }
 }
+
+#notice {
+  float: right;
+  background: lightBlue;
+  min-width: 150px;
+  text-align: center;
+  margin-right: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}

@@ -13,15 +13,19 @@
 <% @notes.each do |note| %>
   <tr>
     <td><%= note.title %></td>
-    <td><%= note.day.strftime('%m/%d/%Y')  %></td>
+    <td><%= note.formatted_day  %></td>
     <td><%= note.course.name %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', course_note_path(:course_id => @course.id, :id => note.id) %></td>
+    <td><%= link_to 'Edit', edit_course_note_path(:course_id => @course.id, :id => note.id) %></td>
+    <td><%= link_to 'Destroy', 
+                     course_note_path(:course_id => @course.id, :id => note.id),
+                     method: :delete, 
+                     data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Note', new_note_path %>
+<%= link_to 'New Note', new_course_note_path(:course_id => @course.id) %>

@@ -33,3 +33,10 @@
   overflow-y: scroll;
   margin: 15px 0px;
 }
+
+.showdown img {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: medium solid black;
+}

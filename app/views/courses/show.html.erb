@@ -18,10 +18,6 @@
     <li>
       <%= link_to note.formatted_day, course_note_path(@course, note) %> |
       <%= link_to 'Edit', edit_course_note_path(:course_id => @course.id, :id => note.id) %> | 
-      <%= link_to 'Destroy', 
-                       course_note_path(:course_id => @course.id, :id => note.id),
-                       method: :delete, 
-                       data: { confirm: 'Are you sure?' } %>
       <%= note.title %>
     </li>
   <% end %>

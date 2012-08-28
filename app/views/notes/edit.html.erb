@@ -3,4 +3,8 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', course_note_path(@course, @note) %> |
-<%= link_to 'Back', course_notes_path(@course) %>
+<%= link_to 'Back', course_path(@course) %> |
+<%= link_to 'Destroy', 
+                 course_note_path(:course_id => @course.id, :id => @note.id),
+                 method: :delete, 
+                 data: { confirm: 'Are you sure?' } %>

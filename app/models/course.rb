@@ -3,5 +3,5 @@ class Course < ActiveRecord::Base
   
   validates_presence_of :name
   
-  has_many :notes
+  has_many :notes, :order => 'day DESC'
 end

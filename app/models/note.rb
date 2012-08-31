@@ -8,7 +8,7 @@ class Note < ActiveRecord::Base
   belongs_to :course
   
   def formatted_day
-    day.strftime('%m/%d/%Y')
+    day.strftime('%m/%d')
   end
   
 end
